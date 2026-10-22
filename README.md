@@ -15,6 +15,7 @@ L'application tient dans un seul fichier, `index.html`, qui contient les donnée
 | **Tableaux de bord** | Tableaux sur mesure : carte, chiffre clé, comparaison, classement, jauge, anneau, barres. Modèle « Portrait complet (toutes thématiques) ». Export Excel et PNG. |
 | **Stratégie territoriale** | Prospective 2023-2050 : trajectoire démographique réglable (tableau ou points à faire glisser), plan d'actions, impacts comparés au fil de l'eau, scénarios enregistrés, export Excel. |
 | **Rapport du territoire** | Portrait A4 de 10 pages : présentation, démographie, habitat, économie, social, mobilité, environnement, attractivité, tourisme, sources. Export **PDF** et **Word (.docx)**. |
+| **Assistant IA** | Questions en langage courant sur les données (valeurs, classements, comparaisons, portraits, équipements, tableaux régionaux du RGPH-5). Dans Claude, l'assistant s'appuie sur Claude et consulte les données par des outils ; ailleurs (GitHub Pages, fichier local), un mode simple répond aux questions courantes. |
 | **Comparer · Données · Sources** | Comparaison de 5 territoires au plus, tableau triable et filtrable exportable en **Excel** et **CSV**, documentation des sources et de la méthode. |
 
 Les tableaux de bord et les scénarios sont enregistrés dans le navigateur de chaque utilisateur (`localStorage`). Le mode sombre suit le réglage du système.
@@ -84,6 +85,7 @@ pip install playwright        # le navigateur Chromium doit être installé
 python3 tests/test11.py       # carte, analyse, tableaux de bord, stratégie (ordinateur et mobile)
 python3 tests/test5.py SN-DK  # rapport de 10 pages et export Word pour un territoire
 python3 tests/test_x.py       # exports Excel et CSV du tableau de données
+python3 tests/test_ia.py      # assistant IA : mode simple et outils (Claude simulé)
 ```
 
 ## Limites connues

@@ -344,6 +344,65 @@ footer.site{margin-top:28px}
 .panel .crumb{display:none}
 /* mouvement réduit */
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== Assistant IA ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ia{display:flex;flex-direction:column;padding:0;overflow:hidden;background:var(--surface);border:1px solid var(--line)}
+.ia-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--sunk)}
+.ia-top .btn{margin-left:auto}
+.ia-mode{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.ia-mode i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.ia-mode.local{background:var(--ochre-soft);color:var(--ochre)}
+.ia-mode.wait i{animation:iaPulse 1s infinite}
+.ia-ctx{font-size:13px;color:var(--muted)}
+.ia-modenote{margin:0;padding:10px 16px;background:var(--ochre-soft);border-bottom:1px solid var(--line)}
+.ia-log{min-height:320px;max-height:min(62vh,640px);overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
+.ia-empty{margin:auto;text-align:center;max-width:460px;color:var(--muted);padding:20px 0}
+.ia-empty svg{width:34px;height:34px;color:var(--accent)}
+.ia-empty h3{font-family:var(--f-display);font-size:21px;color:var(--ink);margin:8px 0 6px}
+.ia-empty p{font-size:14px;line-height:1.55}
+.ia-msg{display:flex;gap:10px;align-items:flex-start;max-width:100%}
+.ia-msg.user{justify-content:flex-end}
+.ia-msg.user .ia-b{background:var(--accent);color:var(--accent-ink);border-radius:14px 14px 4px 14px;padding:9px 14px;max-width:min(78%,620px);font-size:14.5px;line-height:1.5}
+.ia-av{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.ia-msg.local .ia-av{background:var(--ochre-soft);color:var(--ochre)}
+.ia-msg.assistant .ia-b{flex:1;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:4px 14px 14px 14px;padding:10px 15px;font-size:14.5px;line-height:1.6}
+.ia-b p{margin:0 0 .6em}.ia-b p:last-child{margin-bottom:0}
+.ia-b ul,.ia-b ol{margin:.2em 0 .7em;padding-left:1.3em}.ia-b li{margin:.15em 0}
+.ia-b h4{font-family:var(--f-display);font-size:16px;margin:.8em 0 .35em}
+.ia-b code{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);padding:1px 4px;border-radius:4px}
+.ia-b .tbl{margin:.4em 0 .8em;border:1px solid var(--line);border-radius:8px}
+.ia-b table{border-collapse:collapse;width:100%;font-size:13px}
+.ia-b th{background:var(--sunk);text-align:left;font-weight:700;padding:6px 9px;border-bottom:1px solid var(--line2);white-space:nowrap}
+.ia-b td{padding:5px 9px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.ia-b tr:last-child td{border-bottom:0}
+.ia-b th,.ia-b td{text-align:left}.ia-b td.n{text-align:right;white-space:nowrap}
+.ia-b .ia-src{font-size:12px;color:var(--muted);border-top:1px dashed var(--line2);padding-top:7px;margin-top:8px}
+.ia-steps{display:flex;flex-direction:column;gap:3px}
+.ia-steps:not(:empty){margin-bottom:8px;padding-bottom:7px;border-bottom:1px dashed var(--line2)}
+.ia-step{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
+.ia-step i{width:7px;height:7px;border-radius:50%;background:var(--line2);animation:iaPulse 1s infinite}
+.ia-step.ok i{background:var(--accent);animation:none}.ia-step.ko i{background:var(--ochre);animation:none}
+.ia-think{display:inline-flex;align-items:center;gap:4px;color:var(--muted);font-size:13.5px}
+.ia-think i{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:iaPulse 1.1s infinite}
+.ia-think i:nth-child(2){animation-delay:.18s}.ia-think i:nth-child(3){animation-delay:.36s;margin-right:4px}
+@keyframes iaPulse{0%,100%{opacity:.25}50%{opacity:1}}
+.ia-err{color:var(--ochre);font-size:13px;font-weight:600}
+.ia-go{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px;font-size:12px;color:var(--muted)}
+.ia-go .chip{padding:3px 10px;font-size:12.5px;cursor:pointer;border:0;color:var(--accent)}
+.ia-sugg{display:flex;gap:7px;overflow-x:auto;padding:10px 16px 2px;scrollbar-width:thin}
+.ia-sugg .chip{flex:none;cursor:pointer;border:1px solid var(--line2);background:var(--surface);color:var(--ink);font-weight:500;padding:6px 12px;font-size:13px}
+.ia-sugg .chip:hover{border-color:var(--accent);color:var(--accent)}
+.ia-in{display:flex;gap:8px;align-items:flex-end;padding:10px 16px 12px}
+.ia-in textarea{flex:1;min-width:0;resize:vertical;min-height:46px;max-height:180px;font:inherit;font-size:14.5px;padding:10px 12px;border:1px solid var(--line2);border-radius:var(--r-sm);background:var(--surface);color:var(--ink)}
+.ia-in textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.ia-in .btn{height:46px}
+.ia-foot{margin:0;padding:0 16px 14px}
+.ia-fab{position:fixed;right:18px;bottom:18px;z-index:60;display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 18px 0 14px;border-radius:99px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;box-shadow:var(--sh-2);cursor:pointer}
+.ia-fab:hover{background:var(--accent-2)}
+body.on-ia .ia-fab{display:none}
+@media (max-width:640px){.ia-fab span{display:none}.ia-fab{padding:0;width:50px;justify-content:center}.ia-msg.user .ia-b{max-width:88%}.ia-av{display:none}.ia-log{padding:14px 10px}.ia-in{padding:10px}.ia-top .btn{margin-left:0}}
+@media print{.ia-fab{display:none}}
 </style>
 
 <div class="top">
@@ -362,13 +421,14 @@ footer.site{margin-top:28px}
   <div class="wrapmax gut">
     <div class="tabs" role="tablist" aria-label="Vues">
       <button role="tab" data-v="explorer" aria-selected="true"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z M9 4v14 M15 6v14"/></svg>Explorer la carte</button>
-      <button role="tab" data-v="analyse" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10 M10 20V4 M16 20v-7 M3 20h18"/></svg>Analyse territoriale</button>
+      <button role="tab" data-v="analyse" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10 M10 20V4 M16 20v-7 M3 20h18"/></svg>Analyse</button>
       <button role="tab" data-v="tdb" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4z M13 4h7v4h-7z M13 10h7v10h-7z M4 13h7v7H4z"/></svg>Tableaux de bord</button>
-      <button role="tab" data-v="strat" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8 M15 7h6v6"/></svg>Stratégie territoriale</button>
-      <button role="tab" data-v="rapport" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z M15 3v4h4 M10 12h6 M10 16h6"/></svg>Rapport du territoire</button>
+      <button role="tab" data-v="strat" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8 M15 7h6v6"/></svg>Stratégie</button>
+      <button role="tab" data-v="rapport" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z M15 3v4h4 M10 12h6 M10 16h6"/></svg>Rapport</button>
       <button role="tab" data-v="comparer" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v18 M16 3v18 M4 7h4 M16 17h4 M4 12h16"/></svg>Comparer</button>
       <button role="tab" data-v="donnees" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4z M4 10h16 M4 15h16 M10 5v14"/></svg>Données</button>
-      <button role="tab" data-v="sources" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c-3-2-7-2-9 0v15c2-2 6-2 9 0 3-2 7-2 9 0V4c-2-2-6-2-9 0z M12 4v15"/></svg>Sources et méthode</button>
+      <button role="tab" data-v="ia" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg>Assistant IA</button>
+      <button role="tab" data-v="sources" aria-selected="false"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c-3-2-7-2-9 0v15c2-2 6-2 9 0 3-2 7-2 9 0V4c-2-2-6-2-9 0z M12 4v15"/></svg>Sources</button>
     </div>
   </div>
   <div class="gbar"><div class="wrapmax gut gbar-in">
@@ -520,6 +580,11 @@ footer.site{margin-top:28px}
     <p class="mh-intro">Fixez une trajectoire démographique jusqu'en 2050, construisez un plan d'actions (écoles, santé, électrification, cuisson, logements, hébergement) et mesurez ses effets année par année, par rapport au scénario au fil de l'eau.</p></div>
     <div class="terrbar" id="stTerr"></div></header>
   <div id="stBody"></div>
+</section>
+<section id="v-ia" class="readmax gut view mod" hidden>
+  <header class="modhead"><div class="mh-txt"><div class="rh-eb">Assistant IA</div><h1>Interrogez les données</h1>
+    <p class="mh-intro">Posez vos questions en langage courant : population, habitat, économie, équipements, comparaisons, classements. L'assistant consulte les données de l'observatoire et répond chiffres et sources à l'appui.</p></div></header>
+  <div id="iaBody"></div>
 </section>
 </main>
 
@@ -1254,9 +1319,9 @@ function select(id){
   update();
 }
 function renderGBar(){const t=T[S.sel];terrBar("gTerr");document.getElementById("gCrumb").innerHTML=`<span class="gk">${t.lvl==="N"?"Pays":LVLNAME[t.lvl]}</span>`+crumbOf(t);document.querySelectorAll("#gCrumb [data-id]").forEach(a=>a.onclick=()=>select(a.dataset.id))}
-function update(){renderGBar();syncFilters();renderCatalog();renderMapCtl();colorMap();renderPanel();renderOchips();if(S.view==="rapport")renderReport();if(S.view==="donnees")renderData();if(S.view==="comparer")renderCmp();if(S.view==="analyse")renderAnalyse();if(S.view==="tdb")renderTdb();if(S.view==="strat")renderStrat()}
+function update(){renderGBar();syncFilters();renderCatalog();renderMapCtl();colorMap();renderPanel();renderOchips();if(S.view==="rapport")renderReport();if(S.view==="donnees")renderData();if(S.view==="comparer")renderCmp();if(S.view==="analyse")renderAnalyse();if(S.view==="tdb")renderTdb();if(S.view==="strat")renderStrat();if(S.view==="ia")renderIA()}
 function setView(v){S.view=v;document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.v===v));
-  ["explorer","analyse","tdb","strat","rapport","comparer","donnees","sources"].forEach(x=>document.getElementById("v-"+x).hidden=x!==v);
+  ["explorer","analyse","tdb","strat","rapport","comparer","donnees","sources","ia"].forEach(x=>document.getElementById("v-"+x).hidden=x!==v);document.body.classList.toggle("on-ia",v==="ia");if(v==="ia")renderIA();
   if(v==="analyse")renderAnalyse();if(v==="tdb")renderTdb();if(v==="strat")renderStrat();
   if(v==="rapport")renderReport();if(v==="comparer")renderCmp();if(v==="donnees")renderData();if(v==="sources")renderSources();window.scrollTo(0,0)}
 document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>setView(b.dataset.v));
@@ -1808,6 +1873,244 @@ function bindStrBar(t,sc){const msg=document.getElementById("stMsg");
     return makeXlsx([{name:"Impacts annuels",head:["Année","Population (scénario)","Population (fil de l'eau)","Ménages","Nouveaux ménages depuis 2023","Logements produits (cumul)","Couverture du besoin (%)","Établissements scolaires","Établissements / 10 000 hab.","Structures de santé","Structures / 10 000 hab.","Électrification (%)","Cuisson bois ou charbon (%)","Investissement cumulé (FCFA)"],
       rows:run.map((r,i)=>[r.y,Math.round(r.pop),Math.round(base[i].pop),Math.round(r.men),Math.round(r.need),Math.round(r.logts),r.cov==null?null:+r.cov.toFixed(1),Math.round(r.E),+r.Er.toFixed(2),Math.round(r.Sa),+r.Sr.toFixed(2),+r.el.toFixed(1),+r.bc.toFixed(1),r.inv||null]),widths:[8,16,16,12,14,14,12,12,12,12,12,12,12,18]},
      {name:"Hypothèses",head:["Paramètre","Valeur"],rows:[["Territoire",tname(t)],["Scénario",sc.name],...ST_Y.slice(1).map((y,i)=>[`Croissance ${ST_Y[i]}-${y} (%/an)`,sc.g[i]]),["Croissance 2013-2023 (%/an)",+b.g.toFixed(2)],["Plan d'actions",`${sc.y0}-${sc.y1}`],...LEVERS.map(l=>[l.l+" ("+l.u+")",sc.lev[l.k]]),...LEVERS.filter(l=>sc.cost[l.k]).map(l=>[l.cost,sc.cost[l.k]]),["Taille des ménages (constante)",+b.tm.toFixed(2)],["Sources",SRC_TXT]],widths:[52,60]}])},"Classeur Excel",msg)}
+
+/* =====================================================================
+   5. ASSISTANT IA : questions en langage naturel sur les données
+   Claude (capacité « sample » de la page) interroge les données de
+   l'observatoire par des outils ; sans Claude, un mode simple répond
+   aux questions courantes à partir des mêmes fonctions.
+   ===================================================================== */
+const nrm=s=>String(s??"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+const LVW={N:"pays",R:"région",D:"département",C:"commune"};
+const ALLT=()=>[NAT,...regions,...deps,...communes];
+function dice(a,b){if(a===b)return 1;if(a.length<2||b.length<2)return 0;const m=new Map();for(let i=0;i<a.length-1;i++){const g=a.slice(i,i+2);m.set(g,(m.get(g)||0)+1)}let h=0;for(let i=0;i<b.length-1;i++){const g=b.slice(i,i+2),c=m.get(g)||0;if(c){m.set(g,c-1);h++}}return 2*h/(a.length+b.length-2)}
+const rnd=(v,d=1)=>v==null||!isFinite(v)?null:Number(v.toFixed(d));
+function iaTerr(t){const o={id:t.id,nom:t.name,niveau:LVW[t.lvl]};if(t.lvl==="C")o.departement=T[t.dep].name;if(t.lvl==="C"||t.lvl==="D")o.region=regionOf(t).name;o.population=t.pop??null;return o}
+function iaFind(q,lvl){const k=nrm(q).replace(/^(la |le |les )?(region|departement|commune|ville) (de |d |du |des )?/,"");if(!k)throw new Error("Nom de territoire vide.");
+  const L=lvl?String(lvl).toUpperCase()[0]:"";const pool=ALLT().filter(t=>!L||t.lvl===L);
+  const sc=t=>{const n=nrm(t.name);if(n===k)return 100;if(n.length>3&&(n.startsWith(k)||k.startsWith(n)))return 80;if(k.length>3&&n.includes(k))return 60;const r=dice(n,k);return r>=.7?r*50:0};
+  return pool.map(t=>[t,sc(t)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]||"NRDC".indexOf(a[0].lvl)-"NRDC".indexOf(b[0].lvl)).slice(0,8).map(x=>x[0])}
+function iaGet(id){if(id==null||id==="")throw new Error("Identifiant de territoire manquant.");const s=String(id).trim();if(T[s])return T[s];
+  const f=iaFind(s);if(!f.length)throw new Error(`Territoire « ${s} » introuvable : utilisez chercher_territoire.`);return f[0]}
+function iaIndKey(x){const s=String(x??"").trim();if(IK[s])return s;const k=nrm(s);const hit=IND.find(i=>nrm(i.label)===k)||IND.find(i=>nrm(i.label).includes(k)&&k.length>3);
+  if(hit)return hit.k;throw new Error(`Indicateur « ${s} » inconnu. Codes valides : ${IND.map(i=>i.k).join(", ")}.`)}
+const iaLvl=x=>{const s=nrm(x);if(!s)return null;if(s[0]==="r")return "R";if(s[0]==="d")return "D";if(s[0]==="c")return "C";if(s[0]==="n"||s[0]==="p"||s==="senegal")return "N";return null};
+function iaIndRow(k,t){const i=IK[k],o=valOrReg(k,t);const r={code:k,indicateur:i.label,theme:i.th,valeur:rnd(o.v,Math.max(i.d,1)),unite:i.unit||""};
+  if(t.lvl!=="N"){r.echelle=o.own?LVW[t.lvl]:"valeur de la région "+regionOf(t).name;const rk=o.own?rankIn(k,t,units(t.lvl)):rankIn(k,regionOf(t),regions);if(rk)r.rang=`${rk.r}e sur ${rk.n} ${o.own?SUBW[t.lvl]:"régions"} (1 = valeur la plus élevée)`;r.senegal=rnd(val(k,NAT),Math.max(i.d,1))}
+  r.source=i.src;if(i.warn)r.avertissement=i.warn;return r}
+const SUBW={R:"régions",D:"départements",C:"communes"};
+function inScope(u,sc){if(!sc||sc.lvl==="N")return true;if(sc.lvl==="R")return u.lvl==="R"?u.id===sc.id:u.reg===sc.id;if(sc.lvl==="D")return u.lvl==="C"?u.dep===sc.id:u.id===sc.id;return u.id===sc.id}
+const TYPECAT=(()=>{let m=null;return ()=>{if(m)return m;m={};OCATS.forEach(([c])=>(G.osm.pts[c]||[]).forEach(p=>{m[OTYPE[p[3]]]=c}));return m}})();
+const ATAB={
+ logt:{l:"Type de logement des ménages (%)",src:"ANSD, RGPH-5 2023, tableau VIII-2",c:["Case","Baraque","Maison basse","Maison à étage","Immeuble à appartements","Autre"]},
+ stat:{l:"Statut d'occupation du logement (% des ménages)",src:"ANSD, RGPH-5 2023, tableau VIII-4",c:["Propriétaire","Copropriétaire","Locataire","Colocataire","Location-vente","Logé par l'employeur","Logé par des parents ou amis","Autre"]},
+ toit:{l:"Matériau du toit du bâtiment principal (%)",src:"ANSD, RGPH-5 2023, tableau VIII-8",c:["Autre","Béton","Tuile, ardoise","Zinc, tôle","Chaume, paille"]},
+ sol:{l:"Nature du sol du bâtiment principal (%)",src:"ANSD, RGPH-5 2023, tableau VIII-9",c:["Carrelage","Ciment","Argile, banco","Sable","Tapis","Moquette","Autre"]},
+ ecl:{l:"Principal mode d'éclairage (% des ménages)",src:"ANSD, RGPH-5 2023, tableau VIII-10",c:["Électricité du réseau","Solaire","Lampe torche"]},
+ cuis:{l:"Principal combustible de cuisson (% des ménages)",src:"ANSD, RGPH-5 2023, tableau VIII-11",c:["Bois","Charbon de bois","Gaz","Électricité","Bouse","Autre"]},
+ act:{l:"Taux d'activité des 15 ans et plus (%)",src:"ANSD, RGPH-5 2023, thème III",c:["Hommes","Femmes","Ensemble"]},
+ occ:{l:"Taux d'occupation des 15-60 ans (%)",src:"ANSD, RGPH-5 2023, thème III",c:["Hommes","Femmes","Ensemble"]},
+ alpha:{l:"Taux d'alphabétisation des 10 ans et plus (%)",src:"ANSD, RGPH-5 2023, thème II",c:["Hommes","Femmes","Ensemble"]},
+ mig:{l:"Migrations internes",src:"ANSD, RGPH-5 2023, thème VI",c:["Entrées (durée de vie)","Sorties (durée de vie)","Solde (durée de vie)","Solde relatif durée de vie (%)","Entrées (un an)","Sorties (un an)","Solde relatif un an (%)"]},
+ agri:{l:"Ménages agricoles",src:"ANSD, RGPH-5 2023, thème X",c:["Nombre de ménages agricoles","% pratiquant l'agriculture","% pratiquant l'élevage","% pratiquant la pêche ou l'aquaculture","% pratiquant l'horticulture"]}};
+
+/* ---------- outils (communs à Claude et au mode simple) ---------- */
+const IA_TOOLS={
+ chercher_territoire({nom,niveau}){const f=iaFind(nom,iaLvl(niveau));if(!f.length)return {resultats:[],message:"Aucun territoire ne correspond. Vérifiez l'orthographe."};return {resultats:f.map(iaTerr)}},
+ profil_territoire({id,themes,indicateurs}){const t=iaGet(id);IA_SEEN.add(t.id);
+  let ks=IND.map(i=>i.k);if(Array.isArray(indicateurs)&&indicateurs.length)ks=indicateurs.map(iaIndKey);else if(Array.isArray(themes)&&themes.length){const th=themes.map(nrm);ks=ks.filter(k=>th.includes(nrm(IK[k].th)))}
+  const o={territoire:iaTerr(t),superficie_km2:okA(t)?rnd(t.area,0):null};if(t.lvl==="R"){o.chef_lieu=t.cap;o.taux_urbanisation=t.urb}if(t.note)o.note=t.note;
+  if(t.lvl!=="N")o.appartenance=t.lvl==="C"?`département de ${T[t.dep].name}, région de ${regionOf(t).name}`:t.lvl==="D"?`région de ${regionOf(t).name}`:"Sénégal";
+  o.indicateurs=ks.map(k=>iaIndRow(k,t));
+  if(t.cen)o.repertoire_ANSD={source:REP,concessions:CEN(t,"conc"),menages_2023:CEN(t,"men"),hommes:CEN(t,"h"),femmes:CEN(t,"f"),population_repertoire_2023:CEN(t,"pop"),localites:CEN(t,"nloc"),population_2013:CEN(t,"p13"),menages_2013:CEN(t,"men13")};
+  o.equipements_OSM=Object.fromEntries(OCATS.map(([k,l])=>[l,t.o[k]||0]));o.lieux_habites_OSM=t.pl;
+  if(t.st)o.sante_publique_DTGC={hopitaux:t.st.h.hop,centres_de_sante:t.st.h.cs,postes_de_sante:t.st.h.ps,source:"DTGC via mapSenegal"};
+  const kids=t.lvl==="C"?[]:t.kids;if(kids.length)o.sous_territoires={nombre:kids.length,niveau:SUBW[kids[0].lvl],liste:[...kids].sort((a,b)=>(b.pop||0)-(a.pop||0)).map(u=>({id:u.id,nom:u.name,population:u.pop??null}))};
+  return o},
+ classement({indicateur,niveau,dans,ordre,n,min,max}){const k=iaIndKey(indicateur),i=IK[k];let L=iaLvl(niveau)||"R";if(L==="N")L="R";
+  if(L!=="R"&&!i.lv.includes(L))throw new Error(`« ${i.label} » n'est publié qu'à l'échelle ${i.lv==="R"?"régionale":"régionale et départementale"} : classez les régions${i.lv.includes("D")?" ou les départements":""}.`);
+  const sc=dans?iaGet(dans):null;if(sc)IA_SEEN.add(sc.id);
+  const all=units(L).filter(u=>inScope(u,sc)).map(u=>[u,val(k,u)]).filter(x=>x[1]!=null).sort((a,b)=>b[1]-a[1]);
+  const rank=new Map(all.map((x,j)=>[x[0].id,j+1]));let sel=all;
+  if(min!=null&&min!=="")sel=sel.filter(x=>x[1]>=Number(min));if(max!=null&&max!=="")sel=sel.filter(x=>x[1]<=Number(max));
+  if(String(ordre||"").toLowerCase().startsWith("asc")||nrm(ordre).includes("croiss")&&!nrm(ordre).includes("decroiss"))sel=[...sel].reverse();
+  const N=Math.max(1,Math.min(60,Number(n)||10)),vs=all.map(x=>x[1]),d=Math.max(i.d,1);
+  return {indicateur:i.label,code:k,unite:i.unit||"",source:i.src,avertissement:i.warn,niveau:SUBW[L],perimetre:sc?tname(sc):"Sénégal",
+   territoires_avec_valeur:all.length,territoires_retenus:sel.length,
+   statistiques:vs.length?{minimum:rnd(Math.min(...vs),d),maximum:rnd(Math.max(...vs),d),mediane:rnd(median(vs),d),moyenne_simple:rnd(vs.reduce((a,b)=>a+b,0)/vs.length,d)}:null,
+   valeur_senegal:rnd(val(k,NAT),d),valeur_perimetre:sc&&sc.lvl!=="C"?rnd(valOrReg(k,sc).v,d):undefined,
+   liste:sel.slice(0,N).map(([u,v])=>({rang:rank.get(u.id),id:u.id,nom:u.name,rattachement:u.lvl==="C"?T[u.dep].name:u.lvl==="D"?regionOf(u).name:undefined,valeur:rnd(v,d)}))}},
+ comparer({ids,indicateurs}){const ts=(Array.isArray(ids)?ids:String(ids||"").split(",")).slice(0,8).map(iaGet);if(ts.length<1)throw new Error("Donnez au moins un territoire.");ts.forEach(t=>IA_SEEN.add(t.id));
+  const ks=Array.isArray(indicateurs)&&indicateurs.length?indicateurs.map(iaIndKey):["pop","dens","gr","tmen","elec","bois","pauv","alpha","educ","santeo","equip","heb"];
+  return {territoires:ts.map(iaTerr),indicateurs:ks.map(k=>({code:k,indicateur:IK[k].label,unite:IK[k].unit||"",source:IK[k].src,senegal:rnd(val(k,NAT),Math.max(IK[k].d,1)),valeurs:ts.map(t=>{const o=valOrReg(k,t);return {territoire:t.name,valeur:rnd(o.v,Math.max(IK[k].d,1)),valeur_regionale:!o.own||undefined}})}))}},
+ tableau_regional({tableau,region}){const tb=ATAB[tableau];if(!tb)throw new Error(`Tableau inconnu. Tableaux : ${Object.keys(ATAB).join(", ")}.`);
+  const rows=region?[(()=>{const t=iaGet(region);const r=regionOf(t);return r.lvl==="N"?"National":r.name})()]:[...regions.map(r=>r.name),"Urbain","Rural","National"];
+  return {tableau:tb.l,source:tb.src,colonnes:tb.c,note:"Valeurs publiées par région, milieu urbain ou rural et pour l'ensemble du pays (National).",lignes:rows.map(n=>({territoire:n,valeurs:Object.fromEntries(tb.c.map((c,j)=>[c,A[tableau][n]?.[j]??null]))}))}},
+ equipements({id,categorie,avec_noms}){const t=iaGet(id);IA_SEEN.add(t.id);const tc=TYPECAT();
+  const cats=categorie?OCATS.filter(([k,l])=>k===categorie||nrm(l).includes(nrm(categorie))||nrm(categorie).includes(nrm(l).split(" ")[0])):OCATS;
+  if(!cats.length)throw new Error(`Catégorie inconnue. Catégories : ${OCATS.map(c=>c[0]+" ("+c[1]+")").join(", ")}.`);
+  const ci=new Set(t.ci);const out={territoire:iaTerr(t),source:"OpenStreetMap (exports HOT, oct. 2026)",avertissement:OSMW,categories:[]};
+  cats.forEach(([k,l])=>{const types={};Object.entries(t.o).forEach(([tk,v])=>{if(tk.startsWith("t:")&&tc[tk.slice(2)]===k)types[tk.slice(2)]=v});
+    const c={code:k,categorie:l,total:t.o[k]||0,par_type:types};
+    if(avec_noms||cats.length===1){const pts=(G.osm.pts[k]||[]).filter(p=>ci.has(p[4]));c.exemples=pts.filter(p=>p[2]).slice(0,40).map(p=>({nom:p[2],type:OTYPE[p[3]],commune:communes[p[4]]?.name}));c.sans_nom=pts.filter(p=>!p[2]).length}
+    out.categories.push(c)});
+  if(t.st)out.sante_publique_DTGC={hopitaux:t.st.h.hop,centres_de_sante:t.st.h.cs,postes_de_sante:t.st.h.ps,source:"DTGC via mapSenegal (base incomplète)"};return out}};
+const IA_DEFS=[
+ {name:"chercher_territoire",description:"Trouve une région, un département ou une commune par son nom (tolère les fautes et l'absence d'accents). Renvoie jusqu'à 8 territoires avec leur identifiant, niveau, rattachement et population. À appeler d'abord quand un nom est ambigu (ex. Dakar est à la fois une région et un département).",inputSchema:{type:"object",properties:{nom:{type:"string"},niveau:{type:"string",enum:["region","departement","commune"]}},required:["nom"]}},
+ {name:"profil_territoire",description:"Portrait chiffré d'un territoire (id ou nom ; 'SN' pour le Sénégal) : valeur de chaque indicateur, rang parmi les territoires de même niveau, valeur nationale, source ; répertoire ANSD (ménages, hommes, femmes, 2013) ; équipements OpenStreetMap par catégorie ; sous-territoires avec population. Filtrer avec themes ou indicateurs pour réduire la réponse.",inputSchema:{type:"object",properties:{id:{type:"string"},themes:{type:"array",items:{type:"string"},description:"Démographie, Habitat, Économie, Social, Mobilité, Environnement, Attractivité, Tourisme"},indicateurs:{type:"array",items:{type:"string"},description:"codes d'indicateurs"}},required:["id"]}},
+ {name:"classement",description:"Classe les régions, départements ou communes selon un indicateur, éventuellement dans un périmètre (dans = id d'une région ou d'un département) et entre des bornes min/max. Renvoie la liste ordonnée (rang 1 = valeur la plus élevée), le nombre de territoires retenus, minimum, maximum, médiane et valeur nationale.",inputSchema:{type:"object",properties:{indicateur:{type:"string",description:"code d'indicateur"},niveau:{type:"string",enum:["region","departement","commune"]},dans:{type:"string"},ordre:{type:"string",enum:["desc","asc"]},n:{type:"integer",description:"nombre de lignes (1-60, défaut 10)"},min:{type:"number"},max:{type:"number"}},required:["indicateur","niveau"]}},
+ {name:"comparer",description:"Compare jusqu'à 8 territoires (ids ou noms, tous niveaux, 'SN' pour le Sénégal) sur une liste d'indicateurs (codes). Signale les valeurs qui sont celles de la région.",inputSchema:{type:"object",properties:{ids:{type:"array",items:{type:"string"}},indicateurs:{type:"array",items:{type:"string"}}},required:["ids"]}},
+ {name:"tableau_regional",description:"Tableau détaillé du RGPH-5 2023 par région (avec Urbain, Rural, National) : logt (type de logement), stat (statut d'occupation), toit, sol, ecl (éclairage), cuis (cuisson), act (activité H/F), occ (occupation H/F), alpha (alphabétisation H/F), mig (migrations internes), agri (ménages agricoles). Sans région : toutes les régions.",inputSchema:{type:"object",properties:{tableau:{type:"string",enum:Object.keys(ATAB)},region:{type:"string",description:"id ou nom d'une région (ou d'un territoire, dont on prend la région)"}},required:["tableau"]}},
+ {name:"equipements",description:"Équipements OpenStreetMap d'un territoire : total par catégorie, détail par type (ex. pharmacy, school, hotel) et, pour une seule catégorie ou avec avec_noms, jusqu'à 40 noms d'établissements avec leur commune. Catégories : "+OCATS.map(c=>c[0]).join(", ")+".",inputSchema:{type:"object",properties:{id:{type:"string"},categorie:{type:"string"},avec_noms:{type:"boolean"}},required:["id"]}}];
+const IA_STEP={chercher_territoire:a=>`Recherche du territoire « ${a.nom||""} »`,profil_territoire:a=>`Portrait de ${(T[a.id]||{}).name||a.id||""}`,classement:a=>`Classement des ${SUBW[iaLvl(a.niveau)||"R"]||"territoires"} · ${(IK[a.indicateur]||{}).label||a.indicateur||""}`,comparer:a=>`Comparaison de ${(a.ids||[]).length} territoires`,tableau_regional:a=>`Tableau régional · ${(ATAB[a.tableau]||{}).l||a.tableau||""}`,equipements:a=>`Équipements de ${(T[a.id]||{}).name||a.id||""}`};
+let IA_SEEN=new Set();
+
+function iaRules(){const t=T[S.sel];
+ return `Tu es l'assistant de l'Observatoire des territoires du Sénégal, application de CEGIT. Tu réponds aux questions des utilisateurs uniquement à partir des données de l'observatoire, que tu consultes avec les outils fournis.
+
+Règles :
+- Réponds en français, de façon claire et concise, au registre d'un chargé d'études territoriales.
+- N'invente jamais un chiffre : chaque valeur citée doit venir d'un outil. Si une donnée n'existe pas dans l'observatoire, dis-le et propose ce qui s'en approche.
+- Périmètre : 14 régions, 46 départements (Keur Massar est compté avec Pikine), 558 communes. Les identifiants : 'SN' pour le Sénégal, 'SN-DK' pour la région de Dakar, 'D-<nom>' pour un département, 'C-<département>-<commune>' pour une commune. En cas de doute sur un nom, appelle chercher_territoire.
+- Plusieurs indicateurs ne sont publiés par l'ANSD qu'à l'échelle régionale : pour un département ou une commune, l'outil renvoie la valeur de la région ; précise alors « valeur régionale ».
+- Les comptages OpenStreetMap sont contributifs et incomplets : présente-les comme des ordres de grandeur.
+- Pour expliquer un chiffre, tu peux avancer des pistes d'interprétation, en les présentant comme des hypothèses.
+- Si la question sort du champ des données (opinion politique, autre pays, conseil personnel), rappelle poliment ce que l'observatoire permet de savoir.
+- Mise en forme : paragraphes courts, **gras** pour les chiffres clés, listes à puces, tableau markdown (| … |) dès qu'il y a au moins trois lignes à comparer. Pas de titre de niveau 1. Nombres au format français (espace pour les milliers, virgule décimale).
+- Termine par une ligne « Sources : … » qui cite les producteurs et millésimes utilisés.
+
+Territoire actuellement sélectionné dans l'application : ${tname(t)} (id ${t.id}). Les expressions « ici », « ce territoire », « mon territoire » le désignent.
+
+Catalogue des indicateurs (code | libellé | thème | unité | échelles disponibles : R région, D département, C commune | sens : 1 plus c'est élevé mieux c'est, -1 l'inverse, 0 neutre) :
+${IND.map(i=>`${i.k} | ${i.label} | ${i.th} | ${i.unit||"nombre"} | ${i.lv} | ${i.sense||0}`).join("\n")}
+
+Tableaux régionaux détaillés (outil tableau_regional) : ${Object.entries(ATAB).map(([k,v])=>k+" = "+v.l).join(" ; ")}.
+Catégories d'équipements OSM : ${OCATS.map(c=>c[0]+" = "+c[1]).join(" ; ")}.`}
+
+/* ---------- mode simple (sans Claude) ---------- */
+const IA_KW=[[/agricol|agricult|elevage|eleveur/,"agri"],[/pauvre/,"pauv"],[/alphab.*femme|femme.*alphab/,"alphaf"],[/alphab|lire et ecrire|analphab/,"alpha"],[/activite.*femme|femme.*activ/,"actf"],[/taux d activite|actifs?\b/,"act"],[/occupation|emploi|chomage|travail/,"occ"],
+ [/solaire/,"solaire"],[/electri|eclairage/,"elec"],[/\bgaz\b/,"gaz"],[/\bbois\b|charbon|combustible|cuisson/,"bois"],[/chaume|paille/,"chaume"],[/\bcases?\b|baraque/,"case"],[/etage|immeuble/,"etage"],[/proprietaire/,"prop"],[/locataire|loyer/,"locat"],
+ [/habitants par structure/,"hab_ps"],[/sante publique|structures? de sante|postes? de sante|centres? de sante/,"sante"],[/sante|hopita|pharmac|clinique|medec|soins/,"santeo"],[/ecole|scolaire|education|college|lycee|enseignement/,"educ"],
+ [/hebergements? .*habitant|touristique pour|fonction touristique/,"heb10"],[/hotel|hebergement|auberge|campement|tourisme|touristique/,"heb"],[/restaurant|cafe|\bbars?\b|maquis/,"resto"],[/culture|musee|patrimoine|loisir|monument|culturel/,"cult"],
+ [/densite routiere|reseau routier|routes? classees?/,"routes"],[/routes? nationale|autoroute/,"rn"],[/ferr|\btrain|\brail|\bter\b/,"rail"],[/transport|station service|gare|mobilite/,"transp"],[/banque|financ|distributeur|\bdab\b|\bgab\b/,"fin"],[/commerce|marche|boutique|supermarche/,"comm"],
+ [/\beau\b|assainissement|forage|puits|toilettes/,"eau"],[/attractiv|migrat.* vie|durée de vie/,"migl"],[/migra|exode/,"migr"],[/services publics|mairie|police|gendarmerie|poste\b/,"svc"],[/equipement|services/,"equip"],[/collectivit/,"coll"],
+ [/habitants par localite|dispersion/,"habloc"],[/localites|villages|quartiers/,"loc"],[/taille .*menage|personnes par menage/,"tmen"],[/menages par concession|cohabitation|concession/,"menconc"],[/menage/,"men"],
+ [/urbanis|urbain/,"urb"],[/masculinit|hommes pour|sex/,"sexr"],[/croissance|evolution|progress|augment/,"gr"],[/densit/,"dens"],[/population|habitant|peupl|demograph/,"pop"]];
+let IA_NAMES=null;
+function iaNames(){if(IA_NAMES)return IA_NAMES;const m=new Map();ALLT().forEach(t=>{const k=nrm(t.name);if(k.length<3)return;if(!m.has(k))m.set(k,[]);m.get(k).push(t)});m.set("senegal",[NAT]);IA_NAMES=[...m.entries()].sort((a,b)=>b[0].length-a[0].length);return IA_NAMES}
+function iaParse(q){let n=" "+nrm(q)+" ";const terrs=[];
+ for(const [k,ts] of iaNames()){const re=new RegExp(`(?:\\b(region|departement|commune|ville)s? (?:de |d |du )?)?\\b${k.replace(/ /g,"\\s")}\\b`);const m=n.match(re);if(!m)continue;
+  const want=m[1]==="region"?"R":m[1]==="departement"?"D":m[1]==="commune"||m[1]==="ville"?"C":null;const t=(want&&ts.find(x=>x.lvl===want))||[...ts].sort((a,b)=>"NRDC".indexOf(a.lvl)-"NRDC".indexOf(b.lvl))[0];
+  terrs.push({t,pos:m.index});n=n.slice(0,m.index)+" ".repeat(m[0].length)+n.slice(m.index+m[0].length)}
+ terrs.sort((a,b)=>a.pos-b.pos);const q2=nrm(q);let ind=null;for(const [re,k] of IA_KW)if(re.test(q2)){ind=k;break}
+ const rank=/\b(plus|moins|classement|classe|top|premier|premiere|premiers|dernier|derniers|meilleur|pire|quell?e?s? (?:sont |est )?(?:les? |la )?(?:\d+ )?(?:region|departement|commune)|lesquel)/.test(q2);
+ const lvl=/\bcommunes?\b/.test(q2)?"C":/\bdepartements?\b/.test(q2)?"D":/\bregions?\b/.test(q2)?"R":null;
+ const asc=/\bmoins\b|plus faible|plus bas|plus petit|dernier|pire|le moins/.test(q2)&&!/au moins/.test(q2);const nm=q2.match(/\b(\d{1,2})\b/);
+ return {terrs:terrs.map(x=>x.t),ind,rank,lvl,asc,n:nm?Math.min(30,+nm[1]):null}}
+const fv=(v,k)=>v==null?"n.d.":fr(v,IK[k].d)+(IK[k].unit?" "+IK[k].unit:"");
+function iaLocal(q){const p=iaParse(q);let here=null;if(!p.terrs.length&&/\bici\b|ce territoire|mon territoire|territoire selectionne/.test(nrm(q)))here=T[S.sel];
+ const ts=p.terrs.length?p.terrs:here?[here]:[];const srcs=new Set();let out="";
+ if(p.rank&&(p.ind||p.lvl)){const k=p.ind||"pop",i=IK[k];const sc=ts.find(t=>t.lvl!=="C")||null;let L=p.lvl||(sc?(sc.lvl==="N"?"R":sc.lvl==="R"?"D":"C"):"R");if(sc&&L!=="C"&&"NRDC".indexOf(L)<="NRDC".indexOf(sc.lvl))L=sc.lvl==="R"?"D":"C";
+  if(L!=="R"&&!i.lv.includes(L)){out+=`L'indicateur « ${i.label} » n'est publié qu'à l'échelle régionale : voici le classement des régions.\n\n`;L="R"}
+  const r=IA_TOOLS.classement({indicateur:k,niveau:L,dans:sc&&sc.lvl!=="N"?sc.id:null,ordre:p.asc?"asc":"desc",n:p.n||(L==="R"?14:10)});srcs.add(i.src);
+  out+=`${p.asc?"Valeurs les plus faibles":"Valeurs les plus élevées"} pour **${i.label}** parmi les ${r.niveau} (${r.perimetre}, ${r.territoires_avec_valeur} avec une valeur) :\n\n| Rang | ${L==="R"?"Région":L==="D"?"Département":"Commune"} | Valeur |\n|---|---|---|\n`+r.liste.map(x=>`| ${x.rang} | ${x.nom}${x.rattachement?" ("+x.rattachement+")":""} | ${fv(x.valeur,k)} |`).join("\n")+`\n\nSénégal : **${fv(r.valeur_senegal,k)}** · médiane des ${r.niveau} : ${fv(r.statistiques?.mediane,k)}.`;
+  if(i.warn)out+=`\n\n${i.warn}`}
+ else if(ts.length>=2){const ks=p.ind?[p.ind]:["pop","dens","gr","tmen","elec","equip","heb"];const r=IA_TOOLS.comparer({ids:ts.map(t=>t.id),indicateurs:ks});ks.forEach(k=>srcs.add(IK[k].src));
+  out+=`Comparaison de ${ts.map(t=>"**"+t.name+"**").join(", ")} :\n\n| Indicateur | ${ts.map(t=>t.name).join(" | ")} | Sénégal |\n|---|${ts.map(()=>"---|").join("")}---|\n`+r.indicateurs.map(x=>`| ${x.indicateur} | ${x.valeurs.map(v=>fv(v.valeur,x.code)+(v.valeur_regionale?" *":"")).join(" | ")} | ${fv(x.senegal,x.code)} |`).join("\n");
+  if(r.indicateurs.some(x=>x.valeurs.some(v=>v.valeur_regionale)))out+="\n\n\\* valeur de la région (indicateur publié seulement par région)."}
+ else if(ts.length===1&&p.ind){const t=ts[0],k=p.ind,row=iaIndRow(k,t);srcs.add(IK[k].src);IA_SEEN.add(t.id);
+  out+=`**${IK[k].label}** — ${tname(t)} : **${fv(row.valeur,k)}**${row.echelle&&row.echelle.startsWith("valeur")?` (${row.echelle})`:""}`.replace(/\.?$/,".")+(row.rang?`\n\n- Rang : ${row.rang}`:"")+(t.lvl!=="N"?`\n- Sénégal : ${fv(row.senegal,k)}`:"")+`\n\n${IK[k].def}`+(IK[k].warn?`\n\n${IK[k].warn}`:"")}
+ else if(ts.length===1){const t=ts[0];IA_SEEN.add(t.id);const ks=["pop","dens","gr","men","tmen","elec","bois","equip","heb"];ks.forEach(k=>srcs.add(IK[k].src));
+  out+=`Portrait rapide — **${tname(t)}**${t.lvl==="C"?` (département de ${T[t.dep].name})`:t.lvl==="D"?` (région de ${regionOf(t).name})`:""} :\n\n| Indicateur | Valeur | Sénégal |\n|---|---|---|\n`+ks.map(k=>{const o=valOrReg(k,t);return `| ${IK[k].label} | ${fv(o.v,k)}${o.own?"":" *"} | ${fv(val(k,NAT),k)} |`}).join("\n")+`\n\nÉquipements OpenStreetMap : ${OCATS.filter(([k])=>t.o[k]).sort((a,b)=>t.o[b[0]]-t.o[a[0]]).slice(0,5).map(([k,l])=>`${l.toLowerCase()} (${fr(t.o[k])})`).join(", ")||"aucun recensé"}.`;
+  if(ks.some(k=>!valOrReg(k,t).own))out+="\n\n\\* valeur de la région."}
+ else if(p.ind){const k=p.ind,i=IK[k];const r=IA_TOOLS.classement({indicateur:k,niveau:"R",n:14});srcs.add(i.src);
+  out+=`**${i.label}** au Sénégal : **${fv(r.valeur_senegal,k)}**.\n\n- Valeur la plus élevée : ${r.liste[0].nom} (${fv(r.liste[0].valeur,k)})\n- Valeur la plus faible : ${r.liste[r.liste.length-1].nom} (${fv(r.liste[r.liste.length-1].valeur,k)})\n\n${i.def}`}
+ else return {text:`Je n'ai pas reconnu de territoire ni d'indicateur dans votre question. En mode simple, je sais répondre à des questions comme :\n\n- « Quelle est la densité de Kaolack ? »\n- « Quelles sont les 10 communes les plus peuplées ? »\n- « Classement des régions selon le taux de pauvreté »\n- « Compare Thiès et Mbour »\n- « Portrait de Ziguinchor »`,local:true};
+ return {text:(out+(srcs.size?`\n\nSources : ${[...srcs].join(" ; ")}.`:"")).replace(/\.\.(?!\.)/g,".").replace(/\.(\*\*)\./g,".$1"),local:true}}
+
+/* ---------- rendu ---------- */
+function iaMd(src){const lines=esc(src).split("\n");let o="",i=0;
+ const inl=s=>s.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/(^|[\s(])\*([^*\s][^*]*?)\*(?=[\s).,;:!?]|$)/g,"$1<i>$2</i>").replace(/`([^`]+)`/g,"<code>$1</code>").replace(/\\\*/g,"*");
+ const cells=r=>r.trim().replace(/^\|/,"").replace(/\|$/,"").split("|").map(c=>c.trim());
+ while(i<lines.length){const l=lines[i];
+  if(/^\s*\|/.test(l)){const rows=[];while(i<lines.length&&/^\s*\|/.test(lines[i]))rows.push(lines[i++]);const body=rows.filter(r=>!/^\s*\|?[\s:|-]+\|?\s*$/.test(r)||!r.includes("-"));if(!body.length)continue;
+   const h=cells(body[0]);o+=`<div class="tbl"><table><thead><tr>${h.map(c=>`<th>${inl(c)}</th>`).join("")}</tr></thead><tbody>${body.slice(1).map(r=>`<tr>${cells(r).map(c=>`<td${/^[-−+]?\d/.test(c)?' class="n"':""}>${inl(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;continue}
+  if(/^\s*[-*•] /.test(l)){o+="<ul>";while(i<lines.length&&/^\s*[-*•] /.test(lines[i]))o+=`<li>${inl(lines[i++].replace(/^\s*[-*•] /,""))}</li>`;o+="</ul>";continue}
+  if(/^\s*\d+[.)] /.test(l)){o+="<ol>";while(i<lines.length&&/^\s*\d+[.)] /.test(lines[i]))o+=`<li>${inl(lines[i++].replace(/^\s*\d+[.)] /,""))}</li>`;o+="</ol>";continue}
+  const hm=l.match(/^\s*#{1,6}\s+(.*)/);if(hm){o+=`<h4>${inl(hm[1])}</h4>`;i++;continue}
+  if(/^\s*(-{3,}|_{3,})\s*$/.test(l)){i++;continue}
+  if(!l.trim()){i++;continue}
+  const p=[];while(i<lines.length&&lines[i].trim()&&!/^\s*(\||[-*•] |\d+[.)] |#{1,6}\s)/.test(lines[i]))p.push(lines[i++]);
+  o+=p.length===1&&/^sources?\s*:/i.test(p[0])?`<p class="ia-src">${inl(p[0])}</p>`:`<p>${inl(p.join("<br>"))}</p>`}
+ return o}
+const IA={turns:LS.get("obs-ia-v1",[]),busy:false,ctl:null,mode:"wait",sample:null};
+const IA_ICON=`<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z M5.5 15.5l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5L3.4 17.6l1.5-.6z"/></svg>`;
+const IA_READY=(async()=>{try{if(window.claude&&typeof window.claude.use==="function"){const s=await window.claude.use("sample");if(s){IA.sample=s;IA.mode="claude";
+   try{const lim=await s.limits();if(!lim||!lim.tools)IA.mode="local"}catch(e){}}else IA.mode="local"}else IA.mode="local"}catch(e){IA.mode="local"}
+  renderIaMode()})();
+function renderIaMode(){const b=document.getElementById("iaMode");if(!b)return;
+ b.className="ia-mode "+IA.mode;b.innerHTML=IA.mode==="claude"?`<i></i>Claude · analyse complète des données`:IA.mode==="wait"?`<i></i>Connexion à Claude…`:`<i></i>Mode simple (sans Claude)`;
+ const n=document.getElementById("iaModeNote");if(n)n.hidden=IA.mode!=="local"}
+function iaSugg(){const t=T[S.sel],nm=t.lvl==="N"?"Dakar":t.name;return [
+ "Quelles sont les 10 communes les plus peuplées du Sénégal ?",`Fais le portrait ${t.lvl==="N"?"de la région de Kaolack":t.lvl==="R"?"de la région de "+t.name:t.lvl==="D"?"du département de "+t.name:"de la commune de "+t.name}`,
+ "Quelle région a le taux de pauvreté le plus élevé ?",`Compare ${nm} et ${t.lvl==="C"?T[t.dep].name:t.lvl==="D"?(regionOf(t).name===t.name?"Thiès":regionOf(t).name):"Thiès"} sur l'habitat et l'énergie`,
+ "Où cuisine-t-on le plus au bois ou au charbon ?",`Combien d'hôtels et d'auberges à ${nm} ?`]}
+function iaBubble(role,html,cls=""){const d=document.createElement("div");d.className=`ia-msg ${role} ${cls}`;d.innerHTML=role==="user"?`<div class="ia-b">${html}</div>`:`<div class="ia-av" aria-hidden="true">${IA_ICON}</div><div class="ia-b">${html}</div>`;
+ const log=document.getElementById("iaLog");log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function iaChips(box,ids){const ok=[...ids].filter(id=>T[id]&&id!=="SN").slice(0,6);if(!ok.length)return;const c=document.createElement("div");c.className="ia-go";
+ c.innerHTML=`<span>Ouvrir :</span>`+ok.map(id=>`<button type="button" class="chip" data-id="${id}">${esc(T[id].name)}${ok.some(j=>j!==id&&T[j].name===T[id].name)?" ("+LVW[T[id].lvl]+")":""}</button>`).join("");
+ c.querySelectorAll("button").forEach(b=>b.onclick=()=>{select(b.dataset.id);setView("explorer")});box.querySelector(".ia-b").appendChild(c)}
+function renderIaLog(){const log=document.getElementById("iaLog");log.innerHTML="";
+ if(!IA.turns.length){log.innerHTML=`<div class="ia-empty">${IA_ICON}<h3>Posez une question sur les territoires du Sénégal</h3><p>L'assistant consulte les indicateurs de l'ANSD, les équipements OpenStreetMap et les tableaux du recensement pour répondre, chiffres et sources à l'appui.</p></div>`;return}
+ IA.turns.forEach(m=>iaBubble(m.role,m.role==="user"?esc(m.content).replace(/\n/g,"<br>"):iaMd(m.content),m.local?"local":""))}
+function renderIA(){const t=T[S.sel];const root=document.getElementById("iaBody");
+ if(!root.dataset.built){root.dataset.built=1;root.innerHTML=`<div class="ia card">
+  <div class="ia-top"><span id="iaMode" class="ia-mode"></span><span class="ia-ctx" id="iaCtx"></span><button class="btn sm" type="button" id="iaClear">Nouvelle conversation</button></div>
+  <p class="ia-modenote note" id="iaModeNote" hidden>Claude n'est pas disponible ici (page ouverte hors de Claude, ou accès non autorisé) : l'assistant répond aux questions simples — valeur d'un indicateur, classement, comparaison, portrait rapide. Ouvrez l'application depuis Claude pour des analyses libres.</p>
+  <div class="ia-log" id="iaLog" aria-live="polite"></div>
+  <div class="ia-sugg" id="iaSugg"></div>
+  <form class="ia-in" id="iaForm"><label class="sr" for="iaQ">Votre question</label><textarea id="iaQ" rows="2" maxlength="2000" placeholder="Ex. : Quelles communes de Thiès ont la plus forte croissance ?"></textarea>
+   <button class="btn primary" type="submit" id="iaSend">Envoyer</button><button class="btn" type="button" id="iaStop" hidden>Arrêter</button></form>
+  <p class="note ia-foot">Réponses générées à partir des seules données de l'observatoire (ANSD, OpenStreetMap, DTGC). Elles peuvent comporter des erreurs : vérifiez les chiffres importants dans les vues Explorer, Comparer ou Données. Avec Claude, chaque question consomme l'usage de votre compte Claude.</p></div>`;
+  const q=document.getElementById("iaQ");
+  document.getElementById("iaForm").onsubmit=e=>{e.preventDefault();iaAsk(q.value)};
+  q.onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();iaAsk(q.value)}};
+  document.getElementById("iaStop").onclick=()=>IA.ctl?.abort();
+  document.getElementById("iaClear").onclick=()=>{if(IA.busy)IA.ctl?.abort();IA.turns=[];LS.set("obs-ia-v1",IA.turns);renderIaLog();q.focus()};
+  renderIaLog()}
+ document.getElementById("iaCtx").innerHTML=`Territoire sélectionné : <b>${esc(tname(t))}</b>`;
+ document.getElementById("iaSugg").innerHTML=iaSugg().map(s=>`<button type="button" class="chip">${esc(s)}</button>`).join("");
+ document.querySelectorAll("#iaSugg .chip").forEach(b=>b.onclick=()=>iaAsk(b.textContent));renderIaMode()}
+const IA_ERR={rate_limited:"Trop de questions d'affilée ou limite d'usage atteinte : réessayez dans quelques instants.",session_expired:"Votre session Claude a expiré : reconnectez-vous puis réessayez.",refused:"Claude n'a pas répondu à cette question : reformulez-la.",
+ prompt_too_large:"La conversation est devenue trop longue : cliquez sur « Nouvelle conversation ».",empty_completion:"Aucune réponse n'a été produite : reformulez ou simplifiez la question."};
+const IA_OFF=["not_granted","sampling_disabled","not_declared","capability_disabled","capability_removed","tools_unavailable"];
+async function iaAsk(text){text=String(text||"").trim();if(!text||IA.busy)return;const q=document.getElementById("iaQ");q.value="";
+ if(!IA.turns.length)document.getElementById("iaLog").innerHTML="";
+ IA.turns.push({role:"user",content:text});iaBubble("user",esc(text).replace(/\n/g,"<br>"));IA.busy=true;
+ const send=document.getElementById("iaSend"),stop=document.getElementById("iaStop");send.disabled=true;
+ const box=iaBubble("assistant",`<div class="ia-steps"></div><div class="ia-txt"><span class="ia-think"><i></i><i></i><i></i> Analyse des données…</span></div>`,"pending");
+ const steps=box.querySelector(".ia-steps"),txt=box.querySelector(".ia-txt"),log=document.getElementById("iaLog");IA_SEEN=new Set();
+ const finish=(content,local,note)=>{box.classList.remove("pending");if(local)box.classList.add("local");txt.innerHTML=iaMd(content)+(note?`<p class="ia-err">${esc(note)}</p>`:"");
+  IA.turns.push({role:"assistant",content,local:local||undefined});IA.turns=IA.turns.slice(-24);LS.set("obs-ia-v1",IA.turns);iaChips(box,IA_SEEN);log.scrollTop=log.scrollHeight};
+ const localAns=note=>{let r;try{r=iaLocal(text)}catch(e){r={text:"Je n'ai pas pu répondre à cette question en mode simple."}}finish(r.text,true,note)};
+ try{
+  if(IA.mode==="wait"){await Promise.race([IA_READY,new Promise(r=>setTimeout(r,11000))]);if(IA.mode==="wait"){IA.mode="local";renderIaMode()}}
+  if(IA.mode!=="claude"){localAns();return}
+  IA.ctl=new AbortController();stop.hidden=false;
+  const hist=IA.turns.filter(m=>!m.local||m.role==="user").slice(-12);while(hist.length&&hist[0].role!=="user")hist.shift();
+  const input=[{role:"user",content:iaRules()},...hist.map(m=>({role:m.role,content:m.content}))];
+  const tools=IA_DEFS.map(d=>({...d,execute:async(a)=>{const li=document.createElement("div");li.className="ia-step";li.innerHTML=`<i></i>${esc((IA_STEP[d.name]||(()=>d.name))(a||{}))}`;steps.appendChild(li);log.scrollTop=log.scrollHeight;
+    try{const r=IA_TOOLS[d.name](a||{});li.classList.add("ok");return r}catch(e){li.classList.add("ko");throw e}}}));
+  const res=await IA.sample(input,{tools,modelTier:"default",signal:IA.ctl.signal,onText:({text:tx})=>{txt.innerHTML=iaMd(tx);log.scrollTop=log.scrollHeight}});
+  finish(res.text,false,res.truncated?"Réponse coupée : posez une question plus ciblée.":"")}
+ catch(e){const code=e&&e.code;
+  if(IA_OFF.includes(code)){IA.mode="local";renderIaMode();localAns(code==="not_granted"?"Accès à Claude non autorisé pour cette page : réponse en mode simple.":"Claude n'est pas disponible : réponse en mode simple.")}
+  else if(code==="cancelled"){finish(e.text||"Réponse arrêtée.",false,e.text?"Réponse arrêtée.":"")}
+  else{const partial=code==="refused"?"":(e&&e.text)||"";if(partial)finish(partial,false,IA_ERR[code]||"La réponse a été interrompue : réessayez.");
+   else{box.classList.remove("pending");txt.innerHTML=`<p class="ia-err">${esc(IA_ERR[code]||"La réponse a été interrompue : réessayez.")}</p>`;IA.turns.pop();LS.set("obs-ia-v1",IA.turns);q.value=text}}}
+ finally{IA.busy=false;IA.ctl=null;send.disabled=false;stop.hidden=true}}
+/* bouton flottant */
+(()=>{const b=document.createElement("button");b.type="button";b.className="ia-fab";b.id="iaFab";b.innerHTML=IA_ICON+"<span>Assistant IA</span>";b.onclick=()=>{setView("ia");setTimeout(()=>document.getElementById("iaQ")?.focus(),50)};document.body.appendChild(b)})();
 
 /* ======================= DÉMARRAGE ======================= */
 buildUnits();setVB([0,0,MW,MH]);
