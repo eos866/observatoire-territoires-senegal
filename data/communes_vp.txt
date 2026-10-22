@@ -1,0 +1,554 @@
+# Département|Commune|Population 2023 (Vie-Publique.sn, référentiel RGPH 2023)
+Rufisque|Bambilor|61100
+Rufisque|Bargny|69242
+Dakar|Biscuiterie|74025
+Dakar|Cambérène|71432
+Dakar|Dakar-Plateau|34951
+Pikine|Dalifort|39096
+Pikine|Diamagueune-Sicap Mbao|139376
+Rufisque|Diamniadio|47759
+Dakar|Dieuppeul-Derklé|38725
+Pikine|Djidah Thiaroye Kao|100128
+Dakar|Fann-Point E-Amitié|20115
+Guédiawaye|Golf Sud|114069
+Dakar|Gorée|1691
+Dakar|Grand Dakar|47334
+Dakar|Grand Yoff|186775
+Dakar|Gueule Tapée-Fass-Colobane|59227
+Pikine|Guinaw Rail Nord|30303
+Pikine|Guinaw Rail Sud|40185
+Dakar|H.L.M|42975
+Dakar|Hann-Bel Air|86908
+Keur Massar|Jaxaay-Parcelles|71036
+Keur Massar|Keur Massar Nord|224765
+Keur Massar|Keur Massar Sud|105362
+Keur Massar|Malika|56707
+Pikine|Mbao|149456
+Dakar|Médina|82544
+Guédiawaye|Médina Gounass|36588
+Dakar|Mermoz-Sacré Cœur|38598
+Guédiawaye|Ndiarème Limamoulaye|36024
+Dakar|Ngor|17706
+Dakar|Ouakam|100541
+Dakar|Parcelles Assainies|167671
+Dakar|Patte D'Oie|46821
+Pikine|Pikine Est|32717
+Pikine|Pikine Nord|49088
+Pikine|Pikine Ouest|57240
+Rufisque|Rufisque Est|84754
+Rufisque|Rufisque Nord|126253
+Rufisque|Rufisque Ouest|84452
+Guédiawaye|Sam Notaire|80566
+Rufisque|Sangalkam|110958
+Rufisque|Sébikotane|42839
+Rufisque|Sendou|4045
+Dakar|Sicap-Liberté|41079
+Pikine|Thiaroye Gare|25037
+Pikine|Thiaroye sur Mer|61079
+Rufisque|Tivaouane Peulh-Niagha|152043
+Pikine|Tivaouane-Diacksao|40892
+Guédiawaye|Wakhinane Nimzatt|105461
+Rufisque|Yenne|34892
+Keur Massar|Yeumbeul Nord|204375
+Keur Massar|Yeumbeul Sud|108069
+Dakar|Yoff|119351
+Bambey|Baba Garage|18305
+Bambey|Bambey|37374
+Mbacké|Dalla Ngabou|12609
+Mbacké|Darou Nahim|2942
+Mbacké|Darou Salam Typ|7245
+Mbacké|Dendèye Gouy Gui|7061
+Bambey|Dinguiraye|11881
+Diourbel|Diourbel|157554
+Diourbel|Gade Escale|4521
+Bambey|Gawane|19907
+Mbacké|Kael|7144
+Diourbel|Keur Ngalgou|9760
+Bambey|Keur Samba Kane|21036
+Bambey|Lambaye|30486
+Mbacké|Madina|8763
+Mbacké|Mbacké|101451
+Mbacké|Missirah|8416
+Bambey|Ndangalma|44398
+Diourbel|Ndankh Séne|12410
+Diourbel|Ndindy|17326
+Mbacké|Ndioumane|6651
+Bambey|Ndondol|25843
+Diourbel|Ndoulo|14820
+Mbacké|Nghaye|6777
+Bambey|Ngogom|40948
+Diourbel|Ngohe|40758
+Bambey|Ngoye|54238
+Diourbel|Pattar|26656
+Bambey|Réfane|39955
+Mbacké|Sadio|24444
+Diourbel|Taïba Moutoupha|13890
+Mbacké|Taïba Thièkène|2465
+Mbacké|Taïf|18233
+Bambey|Thiakhar|32096
+Diourbel|Tocky Gare|24821
+Mbacké|Touba Fall|11500
+Diourbel|Touba Lappé|5127
+Mbacké|Touba Mboul|13231
+Mbacké|Touba Mosquée|1120824
+Diourbel|Touré Mbondé|16466
+Foundiougne|Bassoul|11946
+Gossas|Colobane|21341
+Foundiougne|Diagane Barka|12987
+Fatick|Diakhao|5590
+Fatick|Diaoulé|15313
+Fatick|Diarrère|35775
+Fatick|Dioffior|12795
+Foundiougne|Dionewar|12589
+Foundiougne|Diossong|26984
+Fatick|Diouroup|26348
+Fatick|Djilasse|11106
+Foundiougne|Djilor|22876
+Foundiougne|Djirnda|10418
+Fatick|Fatick|39361
+Fatick|Fimela|30886
+Foundiougne|Foundiougne|8924
+Gossas|Gossas|15630
+Foundiougne|Karang Poste|26972
+Foundiougne|Keur Saloum Diané|37793
+Foundiougne|Keur Samba Gueye|36418
+Fatick|Loul Sessène|22528
+Foundiougne|Mbam|11713
+Gossas|Mbar|36318
+Fatick|Mbéllacadiao|18119
+Gossas|Ndiene Lagane|15326
+Fatick|Ndiop|23407
+Fatick|Ngayokheme|29808
+Fatick|Niakhar|33696
+Foundiougne|Niassène|20905
+Foundiougne|Nioro Alassane Tall|46366
+Gossas|Ouadiour|15609
+Fatick|Palmarin Facao|10927
+Foundiougne|Passy|18322
+Fatick|Patar|30583
+Gossas|Patar Lia|18744
+Foundiougne|Sokone|20424
+Foundiougne|Soum|6159
+Fatick|Tattaguine|36197
+Fatick|Thiaré Ndialgui|26127
+Foundiougne|Toubacouta|43592
+Birkelane|Birkelane|10891
+Kaffrine|Boulel|30083
+Malem Hoddar|Darou Miname|21301
+Kaffrine|Diamagadio|24420
+Birkelane|Diamal|15776
+Malem Hoddar|Dianké Souf|25357
+Kaffrine|Diokoul Belbouck|33591
+Koungheul|Fass Thièkène|23547
+Kaffrine|Gniby|19778
+Koungheul|Ida Mouride|31535
+Kaffrine|Kaffrine|57307
+Kaffrine|Kahi|29215
+Kaffrine|Kathiotte|44396
+Birkelane|Keur Mboucki|14229
+Malem Hoddar|Khelcom|1834
+Koungheul|Koungheul|31149
+Koungheul|Lour Escale|34905
+Birkelane|Mabo|36514
+Koungheul|Maka Yop|19428
+Malem Hoddar|Malem Hoddar|12188
+Birkelane|Mbeuleup|7484
+Kaffrine|Médinatoul Salam 2|27628
+Koungheul|Missirah Wadène|29827
+Malem Hoddar|Ndiobène Samba Lamo|8581
+Birkelane|Ndiognick|44449
+Malem Hoddar|Ndioum Ngainth|12613
+Koungheul|Ngainthe Pathé|25769
+Kaffrine|Nganda|14369
+Koungheul|Ribot Escale|23010
+Malem Hoddar|Sagna|53375
+Koungheul|Saly Escale|34134
+Birkelane|Ségré-gatta|7307
+Birkelane|Touba Mbella|14414
+Nioro du Rip|Dabaly|15254
+Guinguinéo|Dara Mboss|6857
+Nioro du Rip|Darou Salam|36161
+Kaolack|Dya|19866
+Guinguinéo|Fass|6453
+Guinguinéo|Gagnick|10272
+Nioro du Rip|Gainthe Kaye|41022
+Kaolack|Gandiaye|18239
+Guinguinéo|Guinguinéo|20340
+Kaolack|Kahone|26376
+Kaolack|Kaolack|298904
+Nioro du Rip|Kayemor|34206
+Kaolack|Keur Baka|29309
+Nioro du Rip|Keur Maba Diakhou|36782
+Nioro du Rip|Keur Madiabel|16551
+Nioro du Rip|Keur Madongo|13488
+Kaolack|Keur Socé|37567
+Guinguinéo|Khelcom-Birane|16865
+Kaolack|Latmingué|41156
+Guinguinéo|Mbadakhoune|25409
+Guinguinéo|Mboss|6094
+Nioro du Rip|Médina Sabakh|66096
+Kaolack|Ndiaffate|49493
+Guinguinéo|Ndiago|13079
+Kaolack|Ndiébel|16636
+Kaolack|Ndiédieng|41021
+Kaolack|Ndoffane|18974
+Nioro du Rip|Ndramé Escale|30098
+Guinguinéo|Ngathie Naoudé|18937
+Nioro du Rip|Ngayene|35730
+Guinguinéo|Nguélou|11324
+Nioro du Rip|Nioro|28491
+Guinguinéo|Ourour|15267
+Guinguinéo|Panal Ouolof|9160
+Nioro du Rip|Paos Koto|24988
+Nioro du Rip|Porokhane|46806
+Kaolack|Sibassor|11508
+Nioro du Rip|Taïba Niassène|38034
+Kaolack|Thiaré|35776
+Kaolack|Thiomby|19228
+Nioro du Rip|Wack Ngouna|48901
+Kédougou|Bandafassi|15840
+Saraya|Bembou|26820
+Salémata|Dakatély|4767
+Salémata|Dar Salam|4165
+Kédougou|Dimboli|9023
+Kédougou|Dindéfélo|7590
+Salémata|Ethiolo|4310
+Kédougou|Fongolimbi|5507
+Kédougou|Kédougou|59231
+Salémata|Kévoye|5559
+Saraya|Khossanto|11176
+Saraya|Médina Baffë|10743
+Saraya|Missirah Sirimana|21715
+Kédougou|Ninéfécha|8715
+Salémata|Oubadji|2513
+Saraya|Sabodala|18016
+Salémata|Salémata|6712
+Saraya|Saraya|4385
+Kédougou|Tomboroncoto|18360
+Médina Yoro Foulah|Badion|17878
+Kolda|Bagadadji|20086
+Médina Yoro Foulah|Bignarabé|7766
+Vélingara|Bonconto|13455
+Médina Yoro Foulah|Bourouco|35461
+Kolda|Coumbacara|15025
+Kolda|Dabo|9611
+Kolda|Dialambéré|16959
+Vélingara|Diaobé-Kabendou|41411
+Médina Yoro Foulah|Dinguiraye|18514
+Kolda|Dioulacolon|32090
+Médina Yoro Foulah|Fafacourou|10911
+Kolda|Guiro Yéro Bocar|18900
+Vélingara|Kandia|28768
+Vélingara|Kandiaye|15351
+Médina Yoro Foulah|Kéréwane|41030
+Kolda|Kolda|103574
+Médina Yoro Foulah|Koulinto|8675
+Vélingara|Kounkané|16216
+Vélingara|Linkering|22486
+Kolda|Mampatim|21955
+Kolda|Médina Chérif|15918
+Kolda|Médina El Hadj|15204
+Vélingara|Médina Gounass|91085
+Médina Yoro Foulah|Médina Yoro Foulah|4936
+Médina Yoro Foulah|Ndorna|16168
+Vélingara|Némataba|11883
+Médina Yoro Foulah|Niaming|19852
+Vélingara|Ouassadou|20849
+Vélingara|Pakour|16237
+Vélingara|Paroumba|19220
+Médina Yoro Foulah|Pata|4265
+Kolda|Salikégné|4641
+Kolda|Saré Bidji|22371
+Vélingara|Saré Coly Sallé|24469
+Kolda|Saré Yoba Diéga|4199
+Vélingara|Sinthiang Koundara|38288
+Kolda|Tankanto Escale|18348
+Kolda|Thiétty|5311
+Vélingara|Vélingara|45431
+Linguère|Affé Djiolof|6796
+Kébémer|Bandègne Ouolof|19038
+Linguère|Barkédji|25122
+Linguère|Boulal|12430
+Louga|Coki|29317
+Linguère|Dahra|45530
+Kébémer|Darou Marnane|14074
+Kébémer|Darou Mousty|52524
+Linguère|Dealy|26745
+Kébémer|Diokoul Diawrigne|21044
+Linguère|Dodji|19091
+Louga|Gande|17197
+Linguère|Gassane|24141
+Kébémer|Guéoul|10547
+Louga|Guet Ardo|11257
+Kébémer|Kab Gaye|14560
+Linguère|Kamb|10962
+Kébémer|Kanène Ndiob|11358
+Kébémer|Kébémer|27305
+Louga|Kéle Gueye|13749
+Louga|Keur Momar Sarr|40451
+Linguère|Labgar|10547
+Louga|Léona|46268
+Linguère|Linguère|19191
+Kébémer|Loro|9708
+Louga|Louga|113365
+Kébémer|Mbacké Cajor|6234
+Kébémer|Mbadiane|10240
+Louga|Mbédiene|14438
+Linguère|Mbeuleukhé|1968
+Linguère|Mboula|9420
+Kébémer|Ndande|32065
+Louga|Ndiagne|10046
+Kébémer|Ndoyène|6517
+Kébémer|Ngourane Ouolof|12366
+Louga|Nguer Malal|34247
+Louga|Ngueune Sarr|21660
+Louga|Nguidilé|32327
+Louga|Niomré|21136
+Linguère|Ouarkhokh|20861
+Louga|Pété Ouarack|6187
+Linguère|Sagatta Djolof|13971
+Kébémer|Sagatta Gueth|18114
+Louga|Sakal|32469
+Kébémer|Sam Yabal|12210
+Louga|Syer|13843
+Linguère|Téssékéré Forage|11691
+Louga|Thiamène|19808
+Linguère|Thiamène Passe|20136
+Linguère|Thiarny|10893
+Linguère|Thiel|16934
+Kébémer|Thieppe|23419
+Kébémer|Thiolom Fall|24994
+Kébémer|Touba Mérina|9556
+Linguère|Yang-Yang|5795
+Matam|Agnam Civol|33358
+Kanel|Aouré|55799
+Matam|Bokidiawé|73400
+Kanel|Bokiladji|46164
+Matam|Dabia|29197
+Kanel|Dembancané|5781
+Kanel|Hamady Hounaré|12646
+Kanel|Kanel|15244
+Ranérou Ferlo|Lougré Thioly|11070
+Matam|Matam|27695
+Matam|Nabadji Civol|75055
+Kanel|Ndendory|50965
+Matam|Nguidjilone|14423
+Kanel|Odobéré|7384
+Matam|Ogo|65694
+Matam|Oréfondé|25799
+Kanel|Orkadiéré|56051
+Kanel|Ouaoundé|9376
+Ranérou Ferlo|Oudalaye|52301
+Matam|Ourossogui|27222
+Ranérou Ferlo|Ranérou|4648
+Kanel|Semmé|9213
+Kanel|Sinthiou Bamambé Banadji|20048
+Matam|Thilogne|15044
+Ranérou Ferlo|Vélingara|35206
+Kanel|Wouro Sidy|52849
+Podor|Aéré Lao|14384
+Podor|Bodé Lao|3760
+Podor|Boké Dialloubé|39506
+Dagana|Bokhol|22651
+Dagana|Dagana|26568
+Podor|Démette|3414
+Dagana|Diama|48498
+Podor|Dodel|46316
+Podor|Doumga Lao|43611
+Podor|Fanaye|48174
+Saint-Louis|Fass Ngom|23154
+Dagana|Gaé|12296
+Podor|Galoya Toucouleur|6501
+Podor|Gamadji Saré|29971
+Saint-Louis|Gandon|71080
+Podor|Golléré|7124
+Podor|Guédé Chantier|7002
+Podor|Guedé Village|52678
+Podor|Madina Diathbé|41491
+Dagana|Mbane|40754
+Podor|Mbolo Birane|31102
+Podor|Mboumba|5457
+Podor|Méry|22731
+Saint-Louis|Mpal|11025
+Podor|Ndiayene Peindao|34012
+Saint-Louis|Ndiébène Gandiole|27938
+Podor|Ndioum|20270
+Dagana|Ndombo Sandjiry|6180
+Dagana|Ngnith|32709
+Podor|Niandane|6769
+Podor|Pété|4835
+Podor|Podor|12512
+Dagana|Richard Toll|73147
+Dagana|Ronkh|27736
+Dagana|Ross-Béthio|16225
+Dagana|Rosso|22299
+Saint-Louis|Saint-Louis|254171
+Podor|Walaldé|4387
+Goudomp|Baghère|13492
+Sédhiou|Bambaly|20424
+Sédhiou|Bémet Bidjini|13816
+Bounkiling|Boghal|19561
+Bounkiling|Bona|8880
+Bounkiling|Bounkiling|9969
+Bounkiling|Diacounda|8458
+Bounkiling|Diambati|14520
+Sédhiou|Diannah Ba|9245
+Sédhiou|Diannah Malary|3272
+Bounkiling|Diaroumé|23718
+Goudomp|Diattacounda|4949
+Sédhiou|Diendé|16703
+Goudomp|Diouboudou|6959
+Sédhiou|Djibabouya|6845
+Goudomp|Djibanar|12165
+Bounkiling|Djinany|4808
+Sédhiou|Djiredji|22946
+Bounkiling|Faoune|18594
+Goudomp|Goudomp|15993
+Bounkiling|Inor|12255
+Bounkiling|Kandion Mangana|2381
+Goudomp|Kaour|5701
+Goudomp|Karantaba|18915
+Goudomp|Kolibantang|12870
+Sédhiou|Koussy|12759
+Bounkiling|Madina Wandifa|18531
+Goudomp|Mangaroungou Santo|13689
+Sédhiou|Marsassoum|9815
+Bounkiling|Ndiamacouta|11543
+Bounkiling|Ndiamalathiel|20305
+Goudomp|Niagha|14730
+Sédhiou|Oudoucar|11972
+Sédhiou|Sakar|11535
+Sédhiou|Sama Kanta Peulh|4357
+Goudomp|Samine|6532
+Sédhiou|San Samba|18095
+Sédhiou|Sédhiou|31511
+Goudomp|Simbandi Balante|23237
+Goudomp|Simbandi Brassou|16302
+Goudomp|Tanaff|6683
+Bounkiling|Tankon|34349
+Goudomp|Yarang Balante|15880
+Bakel|Bakel|18939
+Goudiry|Bala|9799
+Bakel|Ballou|23958
+Koumpentoum|Bamba Thialène|21543
+Goudiry|Bani Israel|8681
+Bakel|Bélé|25861
+Goudiry|Boutoucoufara|8454
+Goudiry|Boynguel Bamba|16616
+Tambacounda|Dialacoto|24519
+Goudiry|Dianké Makha|10949
+Bakel|Diawara|12147
+Goudiry|Dougué|9275
+Bakel|Gabou|28612
+Bakel|Gathiary|3973
+Goudiry|Goudiry|10540
+Goudiry|Goumbayel|9125
+Koumpentoum|Kahène|22566
+Bakel|Kidira|13551
+Goudiry|Koar|12165
+Goudiry|Komoti|12179
+Goudiry|Kothiary|6157
+Goudiry|Koulor|15027
+Koumpentoum|Koumpentoum|15723
+Goudiry|Koussan|11022
+Tambacounda|Koussanar|41104
+Koumpentoum|Kouthia Guaydi|17471
+Koumpentoum|Kouthiaba Wolof|29785
+Bakel|Madina Foulbé|3803
+Tambacounda|Makacolibantang|52984
+Koumpentoum|Malem Niani|4455
+Koumpentoum|Méréto|17546
+Tambacounda|Missirah|57580
+Bakel|Moudery|23906
+Koumpentoum|Ndame|14295
+Tambacounda|Ndoga Babacar|28568
+Tambacounda|Néttéboulou|25992
+Tambacounda|Niani Toucouleur|18069
+Koumpentoum|Pass Koto|19112
+Koumpentoum|Payar|36701
+Bakel|Sadatou|17259
+Goudiry|Sinthiou Bocar Aly|8946
+Bakel|Sinthiou Fissa|12900
+Tambacounda|Sinthiou Malème|29532
+Goudiry|Sinthiou Mamadou Boubou|21666
+Tambacounda|Tambacounda|149071
+Bakel|Toumboura|5028
+Tivaouane|Chérif Lo|28759
+Tivaouane|Darou Khoudoss|104346
+Mbour|Diass|41433
+Thiès|Diender|44358
+Thiès|Fandène|47139
+Mbour|Fissel|48981
+Mbour|Joal-Fadhiouth|61582
+Thiès|Kayar|33273
+Thiès|Keur Moussa|61707
+Thiès|Khombole|20321
+Tivaouane|Koul|32003
+Mbour|Malicounda|117590
+Tivaouane|Mbayène|10447
+Tivaouane|Mboro|40811
+Mbour|Mbour|284189
+Tivaouane|Mékhé|27566
+Tivaouane|Méouane|46289
+Tivaouane|Mérina Dakhar|39103
+Tivaouane|Mont Rolland|17439
+Mbour|Ndiaganiao|60654
+Thiès|Ndiéyène Sirakh|37295
+Tivaouane|Ngandiouf|33255
+Mbour|Ngaparou|13744
+Thiès|Ngoudiane|33350
+Mbour|Nguekhokh|47964
+Mbour|Nguéniène|48977
+Tivaouane|Niakhène|11295
+Thiès|Notto|55967
+Tivaouane|Notto Gouye Diama|34036
+Tivaouane|Pambal|10853
+Tivaouane|Pékèsse|26294
+Tivaouane|Pire Goureye|32685
+Mbour|Popenguine|12743
+Thiès|Pout|29874
+Mbour|Saly Portudal|41811
+Mbour|Sandiara|38333
+Mbour|Sessène|31317
+Mbour|Sindia|57056
+Mbour|Somone|8762
+Tivaouane|Taiba Ndiaye|36721
+Thiès|Tassète|26894
+Mbour|Thiadiaye|20168
+Thiès|Thiénaba|33918
+Thiès|Thiès Est|166256
+Thiès|Thies Nord|136138
+Thiès|Thiès Ouest|88859
+Tivaouane|Thilmakha|14629
+Tivaouane|Tivaouane|102658
+Thiès|Touba Toul|63837
+Ziguinchor|Adéane|19728
+Bignona|Balinghore|5513
+Bignona|Bignona|28642
+Ziguinchor|Boutoupa Camaracounda|8682
+Bignona|Coubalan|12156
+Bignona|Diégoune|7534
+Oussouye|Diembéring|25902
+Bignona|Diouloulou|8109
+Bignona|Djibidione|8859
+Bignona|Djinaky|19580
+Ziguinchor|Enampore|4877
+Bignona|Kafountine|41590
+Bignona|Kartiack|7962
+Bignona|Kataba 1|31996
+Bignona|Mangagoulack|8503
+Oussouye|Mlomp|11426
+Bignona|Mlomp|3128
+Ziguinchor|Niaguis|21671
+Bignona|Niamone|8785
+Ziguinchor|Niassia|5669
+Oussouye|Oukout|8493
+Bignona|Oulampane|14909
+Bignona|Ouonck|10914
+Oussouye|Oussouye|5705
+Oussouye|Santhiaba Manjack|3041
+Bignona|Sindian|11676
+Bignona|Suelle|9174
+Bignona|Tenghori|39509
+Bignona|Thionck-Essyl|8961
+Ziguinchor|Ziguinchor|214874

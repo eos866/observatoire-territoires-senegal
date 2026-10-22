@@ -1,0 +1,4 @@
+tests/shots/
+raw/
+__pycache__/
+*.pyc
